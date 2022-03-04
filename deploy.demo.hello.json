@@ -1,0 +1,14 @@
+{
+  "maven_url": "http://192.168.1.116:8081/repository/maven-public/",
+  "maven_repo": [ {
+    "url" : "https://maven.pkg.github.com/ubsi-home/maven/",
+    "user": "ubsi-user",
+    "password": "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"
+  } ],
+  "service_name": "ubsi.demo.hello",
+  "service_class": "ubsi.demo.hello.Service",
+  "jar_group": "ubsi.demo",
+  "jar_artifact": "ubsi.demo.hello",
+  "jar_version": "1.0",
+  "config": null
+}

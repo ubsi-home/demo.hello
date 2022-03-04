@@ -1,0 +1,8 @@
+{
+  "services": {
+    "ubsi.demo.hello": {
+      "class_name": "ubsi.demo.hello.Service",
+      "startup": true
+    }
+  }
+}
