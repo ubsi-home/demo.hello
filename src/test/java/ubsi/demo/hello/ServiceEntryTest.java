@@ -38,15 +38,6 @@ public class ServiceEntryTest {
         String ack = (String)ubsi.direct("localhost", 7112);
         Context.getLogger("junit", "test-hello").info("return", ack);
         System.out.println("return: " + ack);
-        /* 输出结果：
-[INFO]	2022-03-04 14:36:04.562	liuxd-hp#7112	rewin.ubsi.service	ubsi.demo.hello	[1]ubsi.demo.hello.Service#init()#35	start	"ubsi"
-[INFO]	2022-03-04 14:36:08.522	liuxd-hp#7112	rewin.ubsi.container	rewin.ubsi.container	[1]rewin.ubsi.container.Bootstrap#start()#154	startup	"2.3.0"
-return: hello tester
-[INFO]	2022-03-04 14:36:10.522	liuxd-hp#7112	rewin.ubsi.service	ubsi.demo.hello#hello	[17]ubsi.demo.hello.ServiceEntry#hello()#20	tester	"hello ubsi"
-[INFO]	2022-03-04 14:36:10.522	liuxd-hp#7112	junit	test-hello	[1]ubsi.demo.hello.ServiceEntryTest#testHello()#42	return	"hello tester"
-[INFO]	2022-03-04 14:36:10.537	liuxd-hp#7112	rewin.ubsi.service	ubsi.demo.hello	[1]ubsi.demo.hello.Service#close()#42	stop	"ubsi"
-[INFO]	2022-03-04 14:36:10.537	liuxd-hp#7112	rewin.ubsi.container	rewin.ubsi.container	[1]rewin.ubsi.container.Bootstrap#stop()#190	shutdown	"2.3.0"
-         */
     }
 
     /**
@@ -65,20 +56,6 @@ return: hello tester
         ubsi.direct("localhost", 7112);     // 设置新的参数（会生成配置文件：rewin.ubsi.modules/ubsi.demo.hello/config.json）
 
         testHello();    // 调用hello接口，查看运行参数是否修改
-        /* 输出结果：
-[INFO]	2022-03-04 14:53:54.957	liuxd-hp#7112	rewin.ubsi.service	ubsi.demo.hello	[1]ubsi.demo.hello.Service#init()#35	start	"ubsi"
-[INFO]	2022-03-04 14:53:58.910	liuxd-hp#7112	rewin.ubsi.container	rewin.ubsi.container	[1]rewin.ubsi.container.Bootstrap#start()#154	startup	"2.3.0"
-{
-  "name_restart": "ubsi",
-  "name": "ubsi",
-  "name_comment": "服务实例的名字"
-}
-return: hello tester
-[INFO]	2022-03-04 14:54:01.004	liuxd-hp#7112	rewin.ubsi.service	ubsi.demo.hello#hello	[23]ubsi.demo.hello.ServiceEntry#hello()#20	tester	"hello new-name"
-[INFO]	2022-03-04 14:54:01.004	liuxd-hp#7112	junit	test-hello	[1]ubsi.demo.hello.ServiceEntryTest#testHello()#39	return	"hello tester"
-[INFO]	2022-03-04 14:54:01.004	liuxd-hp#7112	rewin.ubsi.service	ubsi.demo.hello	[1]ubsi.demo.hello.Service#close()#42	stop	"new-name"
-[INFO]	2022-03-04 14:54:01.004	liuxd-hp#7112	rewin.ubsi.container	rewin.ubsi.container	[1]rewin.ubsi.container.Bootstrap#stop()#190	shutdown	"2.3.0"
-         */
     }
 
 }

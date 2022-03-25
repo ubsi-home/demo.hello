@@ -17,7 +17,7 @@ public class ServiceEntry {
     )
     /* 接口的第一个参数必须是ServiceContext，返回值可以是任意类型 */
     public String hello(ServiceContext ctx, String consumer) throws Exception {
-        ctx.getLogger().info(consumer, "hello " + Service.myName);
-        return "hello " + consumer;
+        ctx.getLogger().info(Service.myName, "hello, " + consumer);
+        return Service.myName + ": hello, " + consumer;
     }
 }
