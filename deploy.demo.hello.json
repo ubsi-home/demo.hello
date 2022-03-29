@@ -1,9 +1,13 @@
 {
-  "maven_url": "http://192.168.1.116:8081/repository/maven-public/",
+  "maven_url": "http://maven.aliyun.com/nexus/content/groups/public/",
   "maven_repo": [ {
     "url" : "https://maven.pkg.github.com/ubsi-home/maven/",
-    "user": "{github-account}",
-    "password": "{github-Personal_access_tokens}"
+    "user": "{your-github-account}",
+    "password": "{your-github-Personal_Access_Token}"
+  }, {
+    "url" : "{your-maven-repository-url}",
+    "user": "{your-maven-account}",
+    "password": "{your-maven-password}"
   } ],
   "service_name": "ubsi.demo.hello",
   "service_class": "ubsi.demo.hello.Service",
